@@ -26,7 +26,6 @@ export default function App() {
   return (
     <ThemeProvider>
       <Routes>
-        {/* ========== LANDING PAGE (PUBLIC) ========== */}
         <Route element={<MainLayout />}>
           <Route path="/" element={<Dashboard />} />
           <Route path="/pembimbing-siswa" element={<PembimbingSiswa />} />
@@ -40,10 +39,8 @@ export default function App() {
           <Route path="/siswa/:id" element={<DetailSiswa />} />
         </Route>
 
-        {/* ========== ADMIN LOGIN (PUBLIC) ========== */}
         <Route path="/admin/login" element={<Login />} />
 
-        {/* ========== ADMIN PANEL (PROTECTED) ========== */}
         <Route element={<ProtectedRoute />}>
           <Route element={<AdminLayout />}>
             <Route path="/admin" element={<AdminDashboard />} />
@@ -57,7 +54,6 @@ export default function App() {
           </Route>
         </Route>
 
-        {/* ========== 404 ========== */}
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
     </ThemeProvider>

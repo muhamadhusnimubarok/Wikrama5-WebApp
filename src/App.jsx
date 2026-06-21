@@ -7,9 +7,9 @@ import Dashboard from './pages/Dashboard';
 import PembimbingSiswa from './pages/PembimbingSiswa';
 import Piketku from './pages/Piketku';
 import Album from './pages/Album';
-import Kelas10 from './pages/kelas/Kelas10';
-import Kelas11 from './pages/kelas/Kelas11';
-import Kelas12 from './pages/kelas/Kelas12';
+// import Kelas10 from './pages/kelas/Kelas10';
+// import Kelas11 from './pages/kelas/Kelas11';
+// import Kelas12 from './pages/kelas/Kelas12';
 import Alumni from './pages/kelas/Alumni';
 import Login from './pages/Admin/Login';
 import AdminDashboard from './pages/Admin/Dashboard';
@@ -33,9 +33,9 @@ export default function App() {
           <Route path="/piketku" element={<Piketku />} />
           <Route path="/album" element={<Album />} />
           <Route path="/album/:id" element={<AlbumDetail />} />
-          <Route path="/kelas/10" element={<Kelas10 />} />
+          {/* <Route path="/kelas/10" element={<Kelas10 />} />
           <Route path="/kelas/11" element={<Kelas11 />} />
-          <Route path="/kelas/12" element={<Kelas12 />} />
+          <Route path="/kelas/12" element={<Kelas12 />} /> */}
           <Route path="/alumni" element={<Alumni />} />
           <Route path="/siswa/:id" element={<DetailSiswa />} />
         </Route>

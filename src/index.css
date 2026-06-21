@@ -1,0 +1,52 @@
+@import "tailwindcss";
+
+
+/* Smooth scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom easing untuk semua transisi */
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Animasi untuk section */
+.section-enter {
+  opacity: 0;
+  transform: translateY(30px) scale(0.97);
+  filter: blur(4px);
+  transition: all 800ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.section-enter-active {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  filter: blur(0);
+}
+
+/* Animasi untuk stagger children */
+.stagger-item {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 600ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.stagger-item.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Smooth image loading */
+img {
+  transition: opacity 400ms ease;
+}
+
+img[loading="lazy"] {
+  opacity: 0;
+}
+
+img[loading="lazy"].loaded {
+  opacity: 1;
+}

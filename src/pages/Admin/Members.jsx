@@ -162,8 +162,11 @@ export default function AdminMembers() {
   };
 
   const handleSertifikatChange = (e) => {
-    const files = Array.from(e.target.files);
-    setFormData({ ...formData, sertifikat_data: files });
+    const newFiles = Array.from(e.target.files);
+    setFormData({
+      ...formData,
+      sertifikat_data: [...formData.sertifikat_data, ...newFiles]
+    });
   };
 
   // ========== IMPORT ==========

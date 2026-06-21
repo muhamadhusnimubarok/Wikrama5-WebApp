@@ -10,7 +10,7 @@ import Album from './pages/Album';
 // import Kelas10 from './pages/kelas/Kelas10';
 // import Kelas11 from './pages/kelas/Kelas11';
 // import Kelas12 from './pages/kelas/Kelas12';
-import Alumni from './pages/kelas/Alumni';
+// import Alumni from './pages/kelas/Alumni';
 import Login from './pages/Admin/Login';
 import AdminDashboard from './pages/Admin/Dashboard';
 import AdminBanners from './pages/Admin/Banners';
@@ -36,7 +36,7 @@ export default function App() {
           {/* <Route path="/kelas/10" element={<Kelas10 />} />
           <Route path="/kelas/11" element={<Kelas11 />} />
           <Route path="/kelas/12" element={<Kelas12 />} /> */}
-          <Route path="/alumni" element={<Alumni />} />
+          {/* <Route path="/alumni" element={<Alumni />} /> */}
           <Route path="/siswa/:id" element={<DetailSiswa />} />
         </Route>
 
